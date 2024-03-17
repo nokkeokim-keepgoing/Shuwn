@@ -11,6 +11,7 @@
 		FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48E22BA0B74A00650F88 /* ContentView.swift */; };
 		FB2F48E52BA0B74B00650F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E42BA0B74B00650F88 /* Assets.xcassets */; };
 		FB2F48E82BA0B74B00650F88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */; };
+		FB2F48EF2BA7477100650F88 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48EE2BA7477100650F88 /* SettingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		FB2F48E22BA0B74A00650F88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB2F48E42BA0B74B00650F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB2F48EE2BA7477100650F88 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				FB2F48E02BA0B74A00650F88 /* SettingCloneAppApp.swift */,
 				FB2F48E22BA0B74A00650F88 /* ContentView.swift */,
+				FB2F48EE2BA7477100650F88 /* SettingCell.swift */,
 				FB2F48E42BA0B74B00650F88 /* Assets.xcassets */,
 				FB2F48E62BA0B74B00650F88 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */,
+				FB2F48EF2BA7477100650F88 /* SettingCell.swift in Sources */,
 				FB2F48E12BA0B74A00650F88 /* SettingCloneAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
