@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingCell: View {
     let iconName: String
     let cellName: String
+    let iconColor: Color
     var body: some View {
         HStack {
             Image(systemName: iconName)
@@ -17,7 +18,7 @@ struct SettingCell: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 20, height: 20)
                 .padding(.all, 4)
-                .background(.indigo)
+                .background(iconColor)
                 .foregroundColor(.white)
                 .cornerRadius(6)
             Spacer().frame(width: 12)
@@ -31,5 +32,5 @@ struct SettingCell: View {
 }
 
 #Preview {
-    SettingCell(iconName: "hourglass", cellName: "스크린 타임")
+    SettingCell(iconName: "hourglass", cellName: "스크린 타임", iconColor: .indigo)
 }
