@@ -75,7 +75,7 @@ struct ContentView: View {
                 Section {
                     SettingCell(iconName: "gear", cellName: "일반", iconColor: .gray)
                     
-                    SettingCell(iconName: "gear", cellName: "제어 센터", iconColor: .gray)
+                    SettingCell(iconName: "switch.2", cellName: "제어 센터", iconColor: .gray)
                     
                     SettingCell(iconName: "button.vertical.left.press", cellName: "듕작 버튼", iconColor: .blue)
                     

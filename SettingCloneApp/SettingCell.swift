@@ -23,7 +23,12 @@ struct SettingCell: View {
                 .cornerRadius(6)
             Spacer().frame(width: 12)
             NavigationLink {
-                Text(cellName)
+                if cellName == "제어 센터" {
+                    ControlCenterDetail()
+                }
+                else {
+                    Text(cellName)
+                }
             } label: {
                 Text(cellName)
             }
