@@ -11,8 +11,18 @@
 		FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48E22BA0B74A00650F88 /* ContentView.swift */; };
 		FB2F48E52BA0B74B00650F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E42BA0B74B00650F88 /* Assets.xcassets */; };
 		FB2F48E82BA0B74B00650F88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */; };
-		FB2F48EF2BA7477100650F88 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48EE2BA7477100650F88 /* SettingCell.swift */; };
+		FB2F48EF2BA7477100650F88 /* SettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48EE2BA7477100650F88 /* SettingCellView.swift */; };
 		FB968D502BA9D1CC00C610FF /* ControlCenterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */; };
+		FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D8E2BAC026D00C610FF /* SettingView.swift */; };
+		FB968D912BAC02D900C610FF /* SettingSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D902BAC02D900C610FF /* SettingSectionData.swift */; };
+		FB968D932BAC02FB00C610FF /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D922BAC02FB00C610FF /* SettingData.swift */; };
+		FB968D962BAC076900C610FF /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D952BAC076900C610FF /* data.swift */; };
+		FB968D982BAC081400C610FF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D972BAC081400C610FF /* UserData.swift */; };
+		FB968D9A2BAC0D9700C610FF /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D992BAC0D9700C610FF /* NavigationManager.swift */; };
+		FB968D9C2BAC156F00C610FF /* NavigationLinkCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9B2BAC156F00C610FF /* NavigationLinkCellView.swift */; };
+		FB968D9E2BAC162B00C610FF /* ToggleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9D2BAC162B00C610FF /* ToggleCellView.swift */; };
+		FB968DA02BAC172000C610FF /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9F2BAC172000C610FF /* IconView.swift */; };
+		FB968DA32BAC1A5500C610FF /* ProfileCellVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +31,18 @@
 		FB2F48E22BA0B74A00650F88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB2F48E42BA0B74B00650F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB2F48EE2BA7477100650F88 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		FB2F48EE2BA7477100650F88 /* SettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellView.swift; sourceTree = "<group>"; };
 		FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterDetail.swift; sourceTree = "<group>"; };
+		FB968D8E2BAC026D00C610FF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		FB968D902BAC02D900C610FF /* SettingSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionData.swift; sourceTree = "<group>"; };
+		FB968D922BAC02FB00C610FF /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
+		FB968D952BAC076900C610FF /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		FB968D972BAC081400C610FF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FB968D992BAC0D9700C610FF /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		FB968D9B2BAC156F00C610FF /* NavigationLinkCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkCellView.swift; sourceTree = "<group>"; };
+		FB968D9D2BAC162B00C610FF /* ToggleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCellView.swift; sourceTree = "<group>"; };
+		FB968D9F2BAC172000C610FF /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +75,14 @@
 		FB2F48DF2BA0B74A00650F88 /* SettingCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB968DA12BAC191C00C610FF /* Managers */,
+				FB968D8B2BAC021400C610FF /* Views */,
+				FB968D942BAC042800C610FF /* Helpers */,
+				FB968D8C2BAC022800C610FF /* Models */,
 				FB2F48E02BA0B74A00650F88 /* SettingCloneAppApp.swift */,
 				FB2F48E22BA0B74A00650F88 /* ContentView.swift */,
-				FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */,
-				FB2F48EE2BA7477100650F88 /* SettingCell.swift */,
 				FB2F48E42BA0B74B00650F88 /* Assets.xcassets */,
+				FB968D952BAC076900C610FF /* data.swift */,
 				FB2F48E62BA0B74B00650F88 /* Preview Content */,
 			);
 			path = SettingCloneApp;
@@ -71,6 +94,45 @@
 				FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB968D8B2BAC021400C610FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */,
+				FB968D8E2BAC026D00C610FF /* SettingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB968D8C2BAC022800C610FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB968D902BAC02D900C610FF /* SettingSectionData.swift */,
+				FB968D922BAC02FB00C610FF /* SettingData.swift */,
+				FB968D972BAC081400C610FF /* UserData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB968D942BAC042800C610FF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB2F48EE2BA7477100650F88 /* SettingCellView.swift */,
+				FB968D9B2BAC156F00C610FF /* NavigationLinkCellView.swift */,
+				FB968D9D2BAC162B00C610FF /* ToggleCellView.swift */,
+				FB968D9F2BAC172000C610FF /* IconView.swift */,
+				FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB968DA12BAC191C00C610FF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FB968D992BAC0D9700C610FF /* NavigationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +206,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB968D502BA9D1CC00C610FF /* ControlCenterDetail.swift in Sources */,
+				FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */,
+				FB968D912BAC02D900C610FF /* SettingSectionData.swift in Sources */,
+				FB968DA02BAC172000C610FF /* IconView.swift in Sources */,
+				FB968D982BAC081400C610FF /* UserData.swift in Sources */,
+				FB968D9E2BAC162B00C610FF /* ToggleCellView.swift in Sources */,
 				FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */,
-				FB2F48EF2BA7477100650F88 /* SettingCell.swift in Sources */,
+				FB968D932BAC02FB00C610FF /* SettingData.swift in Sources */,
+				FB2F48EF2BA7477100650F88 /* SettingCellView.swift in Sources */,
 				FB2F48E12BA0B74A00650F88 /* SettingCloneAppApp.swift in Sources */,
+				FB968D9C2BAC156F00C610FF /* NavigationLinkCellView.swift in Sources */,
+				FB968D962BAC076900C610FF /* data.swift in Sources */,
+				FB968DA32BAC1A5500C610FF /* ProfileCellVIew.swift in Sources */,
+				FB968D9A2BAC0D9700C610FF /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

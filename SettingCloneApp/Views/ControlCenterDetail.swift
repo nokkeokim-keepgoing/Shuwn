@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ControlCenterDetail: View {
-    
     @State private var isInAppAccessEnabled: Bool = true
     @State private var isHomeControlVisible: Bool = false
+    
     var body: some View {
-        VStack{
+        VStack {
             List {
                 // 앱 내 접근
                 Section {
@@ -34,11 +34,10 @@ struct ControlCenterDetail: View {
                         .font(.caption)
                 }
                 
-            }
-        }
+            } // List
+        } // VStack
         .navigationTitle("제어 센터")
         .navigationBarTitleDisplayMode(.inline)
-
     }
 
 }
