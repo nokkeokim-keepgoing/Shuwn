@@ -28,3 +28,4 @@ let sections: [SettingSectionData] = [
         .init(name: "지갑 및 Apple Pay", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink)
     ])
 ]
+

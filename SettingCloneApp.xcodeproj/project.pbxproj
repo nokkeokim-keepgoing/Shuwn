@@ -23,6 +23,7 @@
 		FB968D9E2BAC162B00C610FF /* ToggleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9D2BAC162B00C610FF /* ToggleCellView.swift */; };
 		FB968DA02BAC172000C610FF /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9F2BAC172000C610FF /* IconView.swift */; };
 		FB968DA32BAC1A5500C610FF /* ProfileCellVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */; };
+		FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FB968D9D2BAC162B00C610FF /* ToggleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCellView.swift; sourceTree = "<group>"; };
 		FB968D9F2BAC172000C610FF /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellVIew.swift; sourceTree = "<group>"; };
+		FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsAndHapticsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */,
 				FB968D8E2BAC026D00C610FF /* SettingView.swift */,
+				FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				FB968D932BAC02FB00C610FF /* SettingData.swift in Sources */,
 				FB2F48EF2BA7477100650F88 /* SettingCellView.swift in Sources */,
 				FB2F48E12BA0B74A00650F88 /* SettingCloneAppApp.swift in Sources */,
+				FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */,
 				FB968D9C2BAC156F00C610FF /* NavigationLinkCellView.swift in Sources */,
 				FB968D962BAC076900C610FF /* data.swift in Sources */,
 				FB968DA32BAC1A5500C610FF /* ProfileCellVIew.swift in Sources */,

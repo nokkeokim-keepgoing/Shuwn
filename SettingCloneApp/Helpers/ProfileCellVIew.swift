@@ -13,8 +13,14 @@ struct ProfileCellView: View {
     var body: some View {
         NavigationLink(value: user) {
             HStack {
-                IconView(name: user.profileIcon, backgroundColor: .gray, isProfile: true)
-                    .padding(.trailing, 6)
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 40.0, height: 40.0)
+                    .padding([.top, .leading, .trailing])
+                    .background(.gray.opacity(0.5))
+                    .foregroundStyle(.white)
+                    .clipShape(Circle())
                 
                 VStack(alignment: .leading, spacing: 6) {
                     Text(user.name)

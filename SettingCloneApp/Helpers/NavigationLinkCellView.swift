@@ -23,7 +23,7 @@ struct NavigationLinkCellView: View {
                     }
                 }
             } icon: {
-                IconView(name: setting.iconName, backgroundColor: setting.iconBackgroundColor, isProfile: false)
+                IconView(name: setting.iconName, backgroundColor: setting.iconBackgroundColor)
             }
         }
     }

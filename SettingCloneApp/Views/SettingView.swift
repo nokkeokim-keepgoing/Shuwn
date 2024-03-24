@@ -40,6 +40,8 @@ struct SettingView: View {
                 switch setting.name {
                 case "제어 센터":
                     ControlCenterDetail()
+                case "사운드 및 햅틱":
+                    SoundsAndHapticsView()
                 default:
                     Text("\(setting.name) 화면")
                 }

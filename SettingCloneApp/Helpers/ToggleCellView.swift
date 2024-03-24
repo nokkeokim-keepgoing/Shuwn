@@ -17,7 +17,7 @@ struct ToggleCellView: View {
                 Text(setting.name)
             }
         } icon: {
-            IconView(name: setting.iconName, backgroundColor: setting.iconBackgroundColor, isProfile: false)
+            IconView(name: setting.iconName, backgroundColor: setting.iconBackgroundColor)
         }
     }
 }
