@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToggleCellView: View {
+struct ToggleRow: View {
     @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
     
     let setting: Setting
@@ -24,5 +24,5 @@ struct ToggleCellView: View {
 }
 
 #Preview {
-    ToggleCellView(setting: Setting(name: "에어플레인 모드", iconName: "airplane", iconBackgroundColor: .orange, type: .toggle)).environmentObject(SettingEnvironmentData())
+    ToggleRow(setting: Setting(name: "에어플레인 모드", iconName: "airplane", iconBackgroundColor: .orange, type: .toggle)).environmentObject(SettingEnvironmentData())
 }

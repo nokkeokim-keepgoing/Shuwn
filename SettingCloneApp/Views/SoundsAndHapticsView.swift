@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct SoundsAndHapticsView: View {
-    @State private var isSilentMode: Bool = true
-    @State private var showInStatusBar: Bool = true
-    @State private var changeWithButtons: Bool = true
-    @State private var volume: Double = 50.0
+    @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
+    
     var body: some View {
         List {
             // 무음 모드
             Section {
                 Label {
-                    Toggle("무음 모드", isOn: $isSilentMode)
+                    Toggle("무음 모드", isOn: $settingEnvironmentData.isSilentMode)
                 } icon: {
-                    Image(systemName: isSilentMode ? "bell.slash.fill" : "bell.fill")
+                    Image(systemName: settingEnvironmentData.isSilentMode ? "bell.slash.fill" : "bell.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundStyle(isSilentMode ? .red : .gray)
+                        .foregroundStyle(settingEnvironmentData.isSilentMode ? .red : .gray)
                         .frame(width: 18, height: 18)
                 }
                 
@@ -35,16 +33,16 @@ struct SoundsAndHapticsView: View {
             
             // 상태 막대에서 보기
             Section {
-                Toggle("상태 막대에서 보기", isOn: $showInStatusBar)
+                Toggle("상태 막대에서 보기", isOn: $settingEnvironmentData.showInStatusBar)
             }
             
             // 벨소리 및 알림
             Section {
-                Slider(value: $volume, in: 0...100, minimumValueLabel: Image(systemName: "speaker.fill").foregroundStyle(.gray), maximumValueLabel: Image(systemName: "speaker.wave.3.fill").foregroundStyle(.gray)){
+                Slider(value: $settingEnvironmentData.volume, in: 0...100, minimumValueLabel: Image(systemName: "speaker.fill").foregroundStyle(.gray), maximumValueLabel: Image(systemName: "speaker.wave.3.fill").foregroundStyle(.gray)){
                     Text("볼륨")
                 } // Slider
                 
-                Toggle("버튼을 사용하여 변경", isOn: $changeWithButtons)
+                Toggle("버튼을 사용하여 변경", isOn: $settingEnvironmentData.changeWithButtons)
                 
                 NavigationLink(value: "햅틱") {
                     HStack {
@@ -99,5 +97,5 @@ func DetailCell(detailCellData: DetailCellData) -> some View {
 }
 
 #Preview {
-    SoundsAndHapticsView()
+    SoundsAndHapticsView().environmentObject(SettingEnvironmentData())
 }

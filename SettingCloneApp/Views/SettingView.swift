@@ -9,35 +9,29 @@ import SwiftUI
 
 struct SettingView: View {
     @ObservedObject var navigationManager: NavigationManager = NavigationManager()
+    @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
     
-    @State private var isAirplaneModeOn: Bool = false
-    @State private var isBluetoothOn: Bool = false
-    var bluetoothStatus: String {
-        isBluetoothOn ? "켬" : "끔"
-    }
+    @State var searchText: String = ""
     
-    @State private var wifiName: String? = "SwiftFun"
-    @State private var searchText: String = ""
-
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
             List {
                 // 프로필 섹션
                 Section{
-                    ProfileCellView(user: USER)
+                    ProfileRow(user: USER)
                 }
                 // 나머지 섹션
                 ForEach(SECTIONS, id: \.title) { section in
                     Section {
                         ForEach(section.settings, id: \.name) { setting in
-                            SettingCellView(setting: setting, wifiName: wifiName, bluetoothStatus: bluetoothStatus)
+                            SettingRow(setting: setting)
                         }
                     }
                 }
             } // List
             .navigationTitle("설정")
-            .navigationDestination(for: Setting.self) { setting in
-                switch setting.name {
+            .navigationDestination(for: Setting.self) { setting in // 설정 탭
+                switch setting.name { // TODO: 설정 이름 enum으로 변경
                 case "제어 센터":
                     ControlCenterDetail()
                 case "사운드 및 햅틱":
@@ -46,10 +40,10 @@ struct SettingView: View {
                     Text("\(setting.name) 화면")
                 }
             }
-            .navigationDestination(for: User.self) { user in
+            .navigationDestination(for: User.self) { user in // 프로필
                 Text("\(user.name)의 프로필")
             }
-            .navigationDestination(for: DetailCellData.self, destination: { detailCell in
+            .navigationDestination(for: DetailCellData.self, destination: { detailCell in // 설정 상세 페이지
                 Text("\(detailCell.title)")
             })
             .searchable(text: $searchText)

@@ -23,6 +23,23 @@ let SECTIONS: [SettingSection] = [
         .init(name: "집중 모드", iconName: "moon.fill", iconBackgroundColor: .indigo, type: .navigationLink),
         .init(name: "스크린 타임", iconName: "hourglass", iconBackgroundColor: .indigo, type: .navigationLink)
     ]),
+    SettingSection(title: "일반", settings: [
+        .init(name: "일반", iconName: "storefront.fill", iconBackgroundColor: .blue, type: .navigationLink),
+        .init(name: "제어 센터", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "동작 버튼", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "디스플레이 및 밝기", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "홈 화면 및 앱 보관함", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "손쉬운 사용", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "배경화면", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "스탠바이", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "Siri 및 검색", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "Face ID 및 암호", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "긴급 구조 요청", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "노출 알림", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "배터리", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink),
+        .init(name: "개인정보 보호 및 보안", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink)
+    ]),
+    
     SettingSection(title: "앱 스토어 및 결제", settings: [
         .init(name: "App Store", iconName: "storefront.fill", iconBackgroundColor: .blue, type: .navigationLink),
         .init(name: "지갑 및 Apple Pay", iconName: "creditcard.fill", iconBackgroundColor: .black, type: .navigationLink)

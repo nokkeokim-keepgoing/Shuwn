@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileCellView: View {
+struct ProfileRow: View {
     let user: User
     
     var body: some View {
@@ -34,5 +34,5 @@ struct ProfileCellView: View {
 }
 
 #Preview {
-    ProfileCellView(user: USER)
+    ProfileRow(user: USER)
 }

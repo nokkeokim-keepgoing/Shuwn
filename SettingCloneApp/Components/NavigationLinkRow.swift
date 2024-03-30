@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationLinkCellView: View {
+struct NavigationLinkRow: View {
     let setting: Setting
     var subTitle: String? = nil
     
@@ -25,9 +25,9 @@ struct NavigationLinkCellView: View {
             } icon: {
                 IconView(name: setting.iconName, backgroundColor: setting.iconBackgroundColor)
             }
-        }
+        } // NavigationLink
     }
 }
 #Preview {
-    NavigationLinkCellView(setting: Setting(name: "알림", iconName: "bell.badge.fill", iconBackgroundColor: .red, type: .navigationLink))
+    NavigationLinkRow(setting: Setting(name: "알림", iconName: "bell.badge.fill", iconBackgroundColor: .red, type: .navigationLink))
 }
