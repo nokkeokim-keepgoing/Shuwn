@@ -8,7 +8,7 @@
 import SwiftUI
 
 // TODO: Setting Name 열거형으로
-struct SettingData: Hashable {
+struct Setting: Hashable {
     let name: String
     let iconName: String
     let iconBackgroundColor: Color

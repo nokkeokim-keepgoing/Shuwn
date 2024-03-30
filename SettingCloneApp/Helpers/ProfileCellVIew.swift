@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileCellView: View {
-    let user: UserData
+    let user: User
     
     var body: some View {
         NavigationLink(value: user) {
@@ -34,5 +34,5 @@ struct ProfileCellView: View {
 }
 
 #Preview {
-    ProfileCellView(user: UserData(name: "정승원", profileIcon: "person"))
+    ProfileCellView(user: USER)
 }

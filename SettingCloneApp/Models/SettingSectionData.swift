@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct SettingSectionData: Hashable {
+// TODO: header, footer 추가
+struct SettingSection: Hashable {
     var title: String
-    var settings: [SettingData]
+    var settings: [Setting]
+    var header: String?
+    var footer: String?
 }

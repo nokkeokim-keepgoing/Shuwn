@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationLinkCellView: View {
-    let setting: SettingData
+    let setting: Setting
     var subTitle: String? = nil
     
     var body: some View {
@@ -29,5 +29,5 @@ struct NavigationLinkCellView: View {
     }
 }
 #Preview {
-    NavigationLinkCellView(setting: SettingData(name: "알림", iconName: "bell.badge.fill", iconBackgroundColor: .red, type: .navigationLink))
+    NavigationLinkCellView(setting: Setting(name: "알림", iconName: "bell.badge.fill", iconBackgroundColor: .red, type: .navigationLink))
 }

@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ToggleCellView: View {
-    let setting: SettingData
-    @Binding var isAirplaneModeOn: Bool
+    @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
+    
+    let setting: Setting
     
     var body: some View {
         Label {
-            Toggle(isOn: $isAirplaneModeOn) {
+            Toggle(isOn: $settingEnvironmentData.isAirplaneModeOn) {
                 Text(setting.name)
             }
         } icon: {
@@ -21,6 +22,7 @@ struct ToggleCellView: View {
         }
     }
 }
+
 #Preview {
-    ToggleCellView(setting: SettingData(name: "에어플레인 모드", iconName: "airplane", iconBackgroundColor: .orange, type: .toggle), isAirplaneModeOn: .constant(true))
+    ToggleCellView(setting: Setting(name: "에어플레인 모드", iconName: "airplane", iconBackgroundColor: .orange, type: .toggle)).environmentObject(SettingEnvironmentData())
 }

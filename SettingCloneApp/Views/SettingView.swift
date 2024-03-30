@@ -24,19 +24,19 @@ struct SettingView: View {
             List {
                 // 프로필 섹션
                 Section{
-                    ProfileCellView(user: user)
+                    ProfileCellView(user: USER)
                 }
                 // 나머지 섹션
-                ForEach(sections, id: \.title) { section in
+                ForEach(SECTIONS, id: \.title) { section in
                     Section {
                         ForEach(section.settings, id: \.name) { setting in
-                            SettingCellView(setting: setting, isAirplaneModeOn: $isAirplaneModeOn, wifiName: wifiName, bluetoothStatus: bluetoothStatus)
+                            SettingCellView(setting: setting, wifiName: wifiName, bluetoothStatus: bluetoothStatus)
                         }
                     }
                 }
             } // List
             .navigationTitle("설정")
-            .navigationDestination(for: SettingData.self) { setting in
+            .navigationDestination(for: Setting.self) { setting in
                 switch setting.name {
                 case "제어 센터":
                     ControlCenterDetail()
@@ -46,9 +46,12 @@ struct SettingView: View {
                     Text("\(setting.name) 화면")
                 }
             }
-            .navigationDestination(for: UserData.self) { user in
+            .navigationDestination(for: User.self) { user in
                 Text("\(user.name)의 프로필")
             }
+            .navigationDestination(for: DetailCellData.self, destination: { detailCell in
+                Text("\(detailCell.title)")
+            })
             .searchable(text: $searchText)
         } // NavigationStack
         .searchable(

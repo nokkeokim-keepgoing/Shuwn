@@ -34,6 +34,7 @@ struct ControlCenterDetail: View {
                         .font(.caption)
                 }
                 
+                
             } // List
         } // VStack
         .navigationTitle("제어 센터")

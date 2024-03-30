@@ -11,7 +11,7 @@ import SwiftUI
 struct SettingCloneAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(SettingEnvironmentData())
         }
     }
 }

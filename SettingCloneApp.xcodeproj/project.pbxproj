@@ -15,7 +15,7 @@
 		FB968D502BA9D1CC00C610FF /* ControlCenterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */; };
 		FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D8E2BAC026D00C610FF /* SettingView.swift */; };
 		FB968D912BAC02D900C610FF /* SettingSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D902BAC02D900C610FF /* SettingSectionData.swift */; };
-		FB968D932BAC02FB00C610FF /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D922BAC02FB00C610FF /* SettingData.swift */; };
+		FB968D932BAC02FB00C610FF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D922BAC02FB00C610FF /* Setting.swift */; };
 		FB968D962BAC076900C610FF /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D952BAC076900C610FF /* data.swift */; };
 		FB968D982BAC081400C610FF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D972BAC081400C610FF /* UserData.swift */; };
 		FB968D9A2BAC0D9700C610FF /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D992BAC0D9700C610FF /* NavigationManager.swift */; };
@@ -24,6 +24,7 @@
 		FB968DA02BAC172000C610FF /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D9F2BAC172000C610FF /* IconView.swift */; };
 		FB968DA32BAC1A5500C610FF /* ProfileCellVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */; };
 		FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */; };
+		FBD358BB2BB7C472009CBE56 /* SettingEnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,7 @@
 		FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterDetail.swift; sourceTree = "<group>"; };
 		FB968D8E2BAC026D00C610FF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		FB968D902BAC02D900C610FF /* SettingSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionData.swift; sourceTree = "<group>"; };
-		FB968D922BAC02FB00C610FF /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
+		FB968D922BAC02FB00C610FF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		FB968D952BAC076900C610FF /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		FB968D972BAC081400C610FF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FB968D992BAC0D9700C610FF /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		FB968D9F2BAC172000C610FF /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		FB968DA22BAC1A5500C610FF /* ProfileCellVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellVIew.swift; sourceTree = "<group>"; };
 		FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsAndHapticsView.swift; sourceTree = "<group>"; };
+		FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnvironmentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				FB968D902BAC02D900C610FF /* SettingSectionData.swift */,
-				FB968D922BAC02FB00C610FF /* SettingData.swift */,
+				FB968D922BAC02FB00C610FF /* Setting.swift */,
 				FB968D972BAC081400C610FF /* UserData.swift */,
+				FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,10 +215,11 @@
 				FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */,
 				FB968D912BAC02D900C610FF /* SettingSectionData.swift in Sources */,
 				FB968DA02BAC172000C610FF /* IconView.swift in Sources */,
+				FBD358BB2BB7C472009CBE56 /* SettingEnvironmentData.swift in Sources */,
 				FB968D982BAC081400C610FF /* UserData.swift in Sources */,
 				FB968D9E2BAC162B00C610FF /* ToggleCellView.swift in Sources */,
 				FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */,
-				FB968D932BAC02FB00C610FF /* SettingData.swift in Sources */,
+				FB968D932BAC02FB00C610FF /* Setting.swift in Sources */,
 				FB2F48EF2BA7477100650F88 /* SettingCellView.swift in Sources */,
 				FB2F48E12BA0B74A00650F88 /* SettingCloneAppApp.swift in Sources */,
 				FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */,

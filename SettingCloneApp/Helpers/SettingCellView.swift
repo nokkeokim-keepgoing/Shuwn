@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct SettingCellView: View {
-    let setting: SettingData
-    
-    @Binding var isAirplaneModeOn: Bool
-    
+    let setting: Setting
     var wifiName: String?
     var bluetoothStatus: String = ""
     var subTitle: String? {
@@ -27,7 +24,7 @@ struct SettingCellView: View {
     var body: some View {
         switch setting.type {
         case .toggle:
-            ToggleCellView(setting: setting, isAirplaneModeOn: $isAirplaneModeOn)
+            ToggleCellView(setting: setting)
         case .navigationLink:
             NavigationLinkCellView(setting: setting, subTitle: subTitle)
         }
@@ -35,5 +32,5 @@ struct SettingCellView: View {
 }
 
 #Preview {
-    SettingCellView(setting: SettingData(name: "사운드 및 햅틱", iconName: "speaker.wave.3.fill", iconBackgroundColor: .red, type: .navigationLink), isAirplaneModeOn: .constant(false))
+    SettingCellView(setting: Setting(name: "사운드 및 햅틱", iconName: "speaker.wave.3.fill", iconBackgroundColor: .red, type: .navigationLink))
 }
