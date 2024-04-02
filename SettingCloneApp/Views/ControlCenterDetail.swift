@@ -7,29 +7,11 @@
 
 import SwiftUI
 
-// 월요일에 마저 하겠습니다. . . .. .캠핑 다녀올게요 , ,, , , , ,, , ,,
 struct ControlCenterDetail: View {
     @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
     
-    @State var controlCenterItemList: [ControlCenterItem] = [
-        .init(name: "다크 모드", iconName: "person", iconBackgroundColor: .black, isIncluded: true),
-        .init(name: "화면 미러링", iconName: "person", iconBackgroundColor: .black, isIncluded: true),
-        .init(name: "음악 인식", iconName: "person", iconBackgroundColor: .black, isIncluded: true),
-        .init(name: "저전력 모드", iconName: "person", iconBackgroundColor: .black, isIncluded: true),
-        .init(name: "화면 기록", iconName: "person", iconBackgroundColor: .black, isIncluded: true),
-        .init(name: "음성 메모", iconName: "person", iconBackgroundColor: .black, isIncluded: false),
-        .init(name: "Apple TV 리모컨", iconName: "setting", iconBackgroundColor: .black, isIncluded: false)
-    ]
-    var selectedItems: [ControlCenterItem] {
-        controlCenterItemList.filter { item in
-            return item.isIncluded
-        }
-    }
-    var unSelectedItems: [ControlCenterItem] {
-        controlCenterItemList.filter { item in
-            return !item.isIncluded
-        }
-    }
+    @ObservedObject var controlCenterVM: ControlCenterViewModel = ControlCenterViewModel()
+
     
     var body: some View {
         VStack {
@@ -56,9 +38,15 @@ struct ControlCenterDetail: View {
                 
                 // 제어 센터에 포함된 항목
                 Section {
-                    ForEach(selectedItems, id: \.name) { item in
+                    ForEach(controlCenterVM.includedControlCenterItemList, id: \.name) { item in
                         ControlDetailRow(controlCenterItem: item)
                     }
+                    .onMove(perform: { indices, newOffset in
+                        controlCenterVM.moveItem(from: indices, to: newOffset)
+                    })
+                    .onDelete(perform: { indexSet in
+                        controlCenterVM.removeItem(at: indexSet)
+                    })
                 } header: {
                     Text("제어 센터에 포함된 항목")
                         .font(.caption)
@@ -67,7 +55,7 @@ struct ControlCenterDetail: View {
                 
                 // 제어 항목 추가
                 Section {
-                    ForEach(unSelectedItems, id: \.name) { item in
+                    ForEach(controlCenterVM.excludedControlCenterItemList, id: \.name) { item in
                         ControlDetailRow(controlCenterItem: item)
                     }
                 } header: {
@@ -80,6 +68,7 @@ struct ControlCenterDetail: View {
         } // VStack
         .navigationTitle("제어 센터")
         .navigationBarTitleDisplayMode(.inline)
+        .environment(\.editMode, .constant(.active))
     }
 
 
@@ -87,26 +76,22 @@ struct ControlCenterDetail: View {
 
 struct ControlDetailRow: View {
     var controlCenterItem: ControlCenterItem
+    @ObservedObject var controlCenterVM: ControlCenterViewModel = ControlCenterViewModel()
     
+
     var body: some View {
         HStack {
-            if controlCenterItem.isIncluded {
-            Image(systemName: "minus.circle")
+            // 제어 항목 추가 버튼
+            if !controlCenterItem.isIncluded {
+            Image(systemName: "plus.circle.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 25, height: 25)
-                .foregroundStyle(.white)
-                .background(.red)
-                .clipShape(Circle())
-                
-            } else {
-                Image(systemName: "plus.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .background(.green)
-                    .foregroundStyle(.white)
-                    .clipShape(Circle())
+                .frame(width: 22, height: 22)
+                .foregroundStyle(.green)
+                .padding([.trailing], 10)
+                .onTapGesture {
+                    
+                }
             }
             
             Label {
@@ -114,29 +99,11 @@ struct ControlDetailRow: View {
                     Text(controlCenterItem.name)
                     
                     Spacer()
-                    
-                    if controlCenterItem.isIncluded {
-                        Image(systemName: "line.3.horizontal")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 25, height: 25)
-                            .foregroundStyle(.gray.opacity(0.5))
-                    }
-                }
-                .onTapGesture {
                 }
             } icon: {
                 IconView(name: controlCenterItem.iconName, backgroundColor: controlCenterItem.iconBackgroundColor)
             } // Label
         } // HStack
-        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-             Button {
-                // 제거
-             } label: {
-                 Text("제거")
-             }
-                 .tint(.red)
-         }
     }
     
 }

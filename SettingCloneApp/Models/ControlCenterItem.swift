@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ControlCenterItem: Hashable {
+struct ControlCenterItem: Hashable, Identifiable, Equatable {
+    let id = UUID()
     let name: String
     let iconName: String
     let iconBackgroundColor: Color

@@ -26,6 +26,7 @@
 		FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */; };
 		FBD358BB2BB7C472009CBE56 /* SettingEnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */; };
 		FBD358BD2BB7EEBA009CBE56 /* ControlCenterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BC2BB7EEBA009CBE56 /* ControlCenterItem.swift */; };
+		FBD358C02BBBC485009CBE56 /* ControlCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BF2BBBC485009CBE56 /* ControlCenterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsAndHapticsView.swift; sourceTree = "<group>"; };
 		FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnvironmentData.swift; sourceTree = "<group>"; };
 		FBD358BC2BB7EEBA009CBE56 /* ControlCenterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterItem.swift; sourceTree = "<group>"; };
+		FBD358BF2BBBC485009CBE56 /* ControlCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		FB2F48DF2BA0B74A00650F88 /* SettingCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				FBD358BE2BBBC46C009CBE56 /* ViewModels */,
 				FB968DA12BAC191C00C610FF /* Managers */,
 				FB968D8B2BAC021400C610FF /* Views */,
 				FB968D942BAC042800C610FF /* Components */,
@@ -142,6 +145,14 @@
 				FB968D992BAC0D9700C610FF /* NavigationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		FBD358BE2BBBC46C009CBE56 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FBD358BF2BBBC485009CBE56 /* ControlCenterViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				FB968D9E2BAC162B00C610FF /* ToggleRow.swift in Sources */,
 				FB2F48E32BA0B74A00650F88 /* ContentView.swift in Sources */,
 				FB968D932BAC02FB00C610FF /* Setting.swift in Sources */,
+				FBD358C02BBBC485009CBE56 /* ControlCenterViewModel.swift in Sources */,
 				FB2F48EF2BA7477100650F88 /* SettingRow.swift in Sources */,
 				FB2F48E12BA0B74A00650F88 /* SettingCloneAppApp.swift in Sources */,
 				FB968DBB2BB0112000C610FF /* SoundsAndHapticsView.swift in Sources */,
