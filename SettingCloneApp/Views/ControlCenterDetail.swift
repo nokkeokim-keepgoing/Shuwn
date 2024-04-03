@@ -11,7 +11,7 @@ struct ControlCenterDetail: View {
     @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
     
     @ObservedObject var controlCenterVM: ControlCenterViewModel = ControlCenterViewModel()
-
+    @State private var editMode: EditMode = .active
     
     var body: some View {
         VStack {
@@ -24,7 +24,7 @@ struct ControlCenterDetail: View {
                         .font(.caption)
                         .padding([.top, .bottom],20)
                 } footer: {
-                    Text("앱 내에서 제어 센터에 접근할 수 있도록 허용합니다. 비활성화된 상태태에서도 홈 화면에서 제어 센터에 접근할 수 있습니다.")
+                    Text("앱 내에서 제어 센터에 접근할 수 있도록 허용합니다. 비활성화된 상태에서도 홈 화면에서 제어 센터에 접근할 수 있습니다.")
                         .font(.caption)
                 }
 
@@ -57,6 +57,9 @@ struct ControlCenterDetail: View {
                 Section {
                     ForEach(controlCenterVM.excludedControlCenterItemList, id: \.name) { item in
                         ControlDetailRow(controlCenterItem: item)
+                            .onTapGesture {
+                                controlCenterVM.includeItem(item: item)
+                            }
                     }
                 } header: {
                     Text("제어 항목 추가")
@@ -68,7 +71,7 @@ struct ControlCenterDetail: View {
         } // VStack
         .navigationTitle("제어 센터")
         .navigationBarTitleDisplayMode(.inline)
-        .environment(\.editMode, .constant(.active))
+        .environment(\.editMode, $editMode)
     }
 
 
@@ -89,9 +92,6 @@ struct ControlDetailRow: View {
                 .frame(width: 22, height: 22)
                 .foregroundStyle(.green)
                 .padding([.trailing], 10)
-                .onTapGesture {
-                    
-                }
             }
             
             Label {

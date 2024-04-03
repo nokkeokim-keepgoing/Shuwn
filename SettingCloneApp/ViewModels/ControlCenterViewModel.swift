@@ -22,13 +22,18 @@ class ControlCenterViewModel: ObservableObject {
     ]
     
     // 제어 센터에 추가
-    func includeItem(at indexSet: IndexSet) {
-        for index in indexSet {
-            var tempItem = includedControlCenterItemList[index]
-            tempItem.isIncluded = true
+    func includeItem(item: ControlCenterItem) {
+        var tempItem = item
+        tempItem.isIncluded = true
+        
+        //
+        if let index = excludedControlCenterItemList.firstIndex(of: item) {
+            excludedControlCenterItemList[index].isIncluded = false
+            print(includedControlCenterItemList[index].isIncluded)
             
             includedControlCenterItemList.append(tempItem)
-            excludedControlCenterItemList.remove(atOffsets: indexSet)
+            // 제거
+            excludedControlCenterItemList.remove(at: index)
         }
     }
     
@@ -40,13 +45,13 @@ class ControlCenterViewModel: ObservableObject {
     // 제어 센터에서 제거
     func removeItem(at indexSet: IndexSet) {
         for index in indexSet {
-            let tempItem = includedControlCenterItemList[index]
+            var tempItem = includedControlCenterItemList[index]
+            tempItem.isIncluded = false
+            
             
             // 안 보이게
             includedControlCenterItemList[index].isIncluded = false
-            print(includedControlCenterItemList[index].isIncluded)
-            excludedControlCenterItemList.append(.init(name: tempItem
-                .iconName, iconName: tempItem.name, iconBackgroundColor: tempItem.iconBackgroundColor, isIncluded: false))
+            excludedControlCenterItemList.append(tempItem)
         }
         // 제거
         includedControlCenterItemList.remove(atOffsets: indexSet)
