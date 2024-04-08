@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct ControlCenterDetail: View {
-    @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
-    
-    @ObservedObject var controlCenterVM: ControlCenterViewModel = ControlCenterViewModel()
+struct ControlCenterView: View {
+    @EnvironmentObject var settingEnvironmentData: SettingEnvironmentData
+    @EnvironmentObject var controlCenterVM: ControlCenterViewModel
     @State private var editMode: EditMode = .active
     
     var body: some View {
@@ -38,8 +37,8 @@ struct ControlCenterDetail: View {
                 
                 // 제어 센터에 포함된 항목
                 Section {
-                    ForEach(controlCenterVM.includedControlCenterItemList, id: \.name) { item in
-                        ControlDetailRow(controlCenterItem: item)
+                    ForEach(controlCenterVM.includedControlCenterItemList) { item in
+                        ControlDetailRow(item: item, controlCenterViewModel: controlCenterVM)
                     }
                     .onMove(perform: { indices, newOffset in
                         controlCenterVM.moveItem(from: indices, to: newOffset)
@@ -55,11 +54,10 @@ struct ControlCenterDetail: View {
                 
                 // 제어 항목 추가
                 Section {
-                    ForEach(controlCenterVM.excludedControlCenterItemList, id: \.name) { item in
-                        ControlDetailRow(controlCenterItem: item)
-                            .onTapGesture {
-                                controlCenterVM.includeItem(item: item)
-                            }
+                    ForEach(controlCenterVM.excludedControlCenterItemList.filter({ item in
+                        !item.isIncluded
+                    })) { item in
+                        ControlDetailRow(item: item, controlCenterViewModel: controlCenterVM)
                     }
                 } header: {
                     Text("제어 항목 추가")
@@ -73,40 +71,37 @@ struct ControlCenterDetail: View {
         .navigationBarTitleDisplayMode(.inline)
         .environment(\.editMode, $editMode)
     }
-
-
 }
 
-struct ControlDetailRow: View {
-    var controlCenterItem: ControlCenterItem
-    @ObservedObject var controlCenterVM: ControlCenterViewModel = ControlCenterViewModel()
+@ViewBuilder
+func ControlDetailRow(item: ControlCenterItem, controlCenterViewModel: ControlCenterViewModel) -> some View {
     
-
-    var body: some View {
-        HStack {
-            // 제어 항목 추가 버튼
-            if !controlCenterItem.isIncluded {
+    HStack {
+        // 제어 항목 추가 버튼
+        if !item.isIncluded {
             Image(systemName: "plus.circle.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 22, height: 22)
                 .foregroundStyle(.green)
                 .padding([.trailing], 10)
-            }
-            
-            Label {
-                HStack {
-                    Text(controlCenterItem.name)
-                    
-                    Spacer()
+                .onTapGesture {
+                    controlCenterViewModel.includeItem(item: item)
                 }
-            } icon: {
-                IconView(name: controlCenterItem.iconName, backgroundColor: controlCenterItem.iconBackgroundColor)
-            } // Label
-        } // HStack
-    }
+        }
+        
+        Label {
+            HStack {
+                Text(item.name)
+                
+                Spacer()
+            }
+        } icon: {
+            IconView(name: item.iconName, backgroundColor: item.iconBackgroundColor)
+        } // Label
+    } // HStack
     
 }
 #Preview {
-    ControlCenterDetail().environmentObject(SettingEnvironmentData())
+    ControlCenterView().environmentObject(SettingEnvironmentData()).environmentObject(ControlCenterViewModel())
 }

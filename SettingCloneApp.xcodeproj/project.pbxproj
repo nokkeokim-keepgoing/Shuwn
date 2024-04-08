@@ -12,7 +12,7 @@
 		FB2F48E52BA0B74B00650F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E42BA0B74B00650F88 /* Assets.xcassets */; };
 		FB2F48E82BA0B74B00650F88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */; };
 		FB2F48EF2BA7477100650F88 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F48EE2BA7477100650F88 /* SettingRow.swift */; };
-		FB968D502BA9D1CC00C610FF /* ControlCenterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */; };
+		FB968D502BA9D1CC00C610FF /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D4F2BA9D1CC00C610FF /* ControlCenterView.swift */; };
 		FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D8E2BAC026D00C610FF /* SettingView.swift */; };
 		FB968D912BAC02D900C610FF /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D902BAC02D900C610FF /* SettingSection.swift */; };
 		FB968D932BAC02FB00C610FF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB968D922BAC02FB00C610FF /* Setting.swift */; };
@@ -27,6 +27,7 @@
 		FBD358BB2BB7C472009CBE56 /* SettingEnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */; };
 		FBD358BD2BB7EEBA009CBE56 /* ControlCenterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BC2BB7EEBA009CBE56 /* ControlCenterItem.swift */; };
 		FBD358C02BBBC485009CBE56 /* ControlCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD358BF2BBBC485009CBE56 /* ControlCenterViewModel.swift */; };
+		FBD358C32BBFD57F009CBE56 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = FBD358C22BBFD57F009CBE56 /* KakaoSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,7 @@
 		FB2F48E42BA0B74B00650F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2F48E72BA0B74B00650F88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB2F48EE2BA7477100650F88 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
-		FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterDetail.swift; sourceTree = "<group>"; };
+		FB968D4F2BA9D1CC00C610FF /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		FB968D8E2BAC026D00C610FF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		FB968D902BAC02D900C610FF /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
 		FB968D922BAC02FB00C610FF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		FBD358BA2BB7C472009CBE56 /* SettingEnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnvironmentData.swift; sourceTree = "<group>"; };
 		FBD358BC2BB7EEBA009CBE56 /* ControlCenterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterItem.swift; sourceTree = "<group>"; };
 		FBD358BF2BBBC485009CBE56 /* ControlCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViewModel.swift; sourceTree = "<group>"; };
+		FBD358C42BC3777D009CBE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD358C32BBFD57F009CBE56 /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +86,11 @@
 		FB2F48DF2BA0B74A00650F88 /* SettingCloneApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBD358BE2BBBC46C009CBE56 /* ViewModels */,
+				FBD358C42BC3777D009CBE56 /* Info.plist */,
 				FB968DA12BAC191C00C610FF /* Managers */,
 				FB968D8B2BAC021400C610FF /* Views */,
 				FB968D942BAC042800C610FF /* Components */,
+				FBD358BE2BBBC46C009CBE56 /* ViewModels */,
 				FB968D8C2BAC022800C610FF /* Models */,
 				FB2F48E02BA0B74A00650F88 /* SettingCloneAppApp.swift */,
 				FB2F48E22BA0B74A00650F88 /* ContentView.swift */,
@@ -109,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FB968D8E2BAC026D00C610FF /* SettingView.swift */,
-				FB968D4F2BA9D1CC00C610FF /* ControlCenterDetail.swift */,
+				FB968D4F2BA9D1CC00C610FF /* ControlCenterView.swift */,
 				FB968DBA2BB0112000C610FF /* SoundsAndHapticsView.swift */,
 			);
 			path = Views;
@@ -171,6 +175,9 @@
 			dependencies = (
 			);
 			name = SettingCloneApp;
+			packageProductDependencies = (
+				FBD358C22BBFD57F009CBE56 /* KakaoSDK */,
+			);
 			productName = SettingCloneApp;
 			productReference = FB2F48DD2BA0B74A00650F88 /* SettingCloneApp.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +206,9 @@
 				Base,
 			);
 			mainGroup = FB2F48D42BA0B74A00650F88;
+			packageReferences = (
+				FBD358C12BBFD57F009CBE56 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = FB2F48DE2BA0B74A00650F88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB968D502BA9D1CC00C610FF /* ControlCenterDetail.swift in Sources */,
+				FB968D502BA9D1CC00C610FF /* ControlCenterView.swift in Sources */,
 				FB968D8F2BAC026D00C610FF /* SettingView.swift in Sources */,
 				FB968D912BAC02D900C610FF /* SettingSection.swift in Sources */,
 				FB968DA02BAC172000C610FF /* IconView.swift in Sources */,
@@ -379,6 +389,7 @@
 				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SettingCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +419,7 @@
 				DEVELOPMENT_TEAM = 2UWGKS2UN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SettingCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBD358C12BBFD57F009CBE56 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBD358C22BBFD57F009CBE56 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD358C12BBFD57F009CBE56 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB2F48D52BA0B74A00650F88 /* Project object */;
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SettingView: View {
     @ObservedObject var navigationManager: NavigationManager = NavigationManager()
-    @ObservedObject var settingEnvironmentData: SettingEnvironmentData = SettingEnvironmentData()
     
     @State var searchText: String = ""
     
@@ -33,7 +32,7 @@ struct SettingView: View {
             .navigationDestination(for: Setting.self) { setting in // 설정 탭
                 switch setting.name { // TODO: 설정 이름 enum으로 변경
                 case "제어 센터":
-                    ControlCenterDetail()
+                    ControlCenterView().environmentObject(ControlCenterViewModel())
                 case "사운드 및 햅틱":
                     SoundsAndHapticsView()
                 default:
@@ -53,7 +52,6 @@ struct SettingView: View {
           placement: .navigationBarDrawer,
           prompt: "검색"
         )
-        
     }
 }
 
